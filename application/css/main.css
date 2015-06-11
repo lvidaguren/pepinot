@@ -1,0 +1,65 @@
+.rojo {
+	color: red;
+}
+
+.rojo span {
+	font-size: 20px;  
+}
+
+
+
+.globoTexto {
+	display: none;
+	border: solid 1px blue;
+	background-color: #ffff00;
+	width: 50%;
+	margin: auto;
+	padding: 10px;
+	border-radius: 12px;
+}
+
+.tipo {
+	display: none;
+	width: 45px;
+}
+
+.tipo .head {
+	width: 30px;
+	background-color: #f5e0c2;
+	border-radius: 30px;
+	height: 30px;
+	margin: auto;
+}
+
+.tipo .leg {
+	width: 20px;
+	background-color: #9d681a;
+	height: 80px;
+	position: relative;
+	top: 40px;
+}
+
+.tipo .leg.right {
+	 float: right;
+	 margin-left: 3px;
+}
+
+.tipo .leg.left {
+	 float: left;
+}
+
+.tipo .arm {
+	width: 20px;
+	background-color: #f5e0c2;
+	height: 60px;
+	position: relative;
+	top: 20px;
+}
+.tipo .arm.right {
+	 float: right;
+	 margin-left: 4px;
+}
+
+.tipo .arm.left {
+	 float: left;
+}
