@@ -32,6 +32,9 @@ $(function() {
 			per.offset({ top: offset.top, left: offset.left+5});
 		else if(e.which == 37)
 			per.offset({ top: offset.top, left: offset.left-5});
+		else if(e.which == 38) {
+			jump(per);
+		}
 
 		console.log(e.which);
 	});
@@ -77,4 +80,13 @@ function hablar(palabras) {
 
 function pensar(palabras) {
 	return $("<div class='globoTexto'>"+palabras+"</div>");
+}
+
+function jump(per) {
+	var offset = per.offset();
+	per.offset({ top: offset.top-10, left: offset.left});
+	setTimeout(function(){
+		per.offset({ top: offset.top, left: offset.left});	
+	},500);	
+	
 }
