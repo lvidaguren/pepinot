@@ -15,11 +15,31 @@ $(function() {
 		p.show();
 		
 		$(".tipo").toggle();
-	})
+	});
+	
+	$("body").on("click",".tipo",function(e){
+		e.stopPropagation();
+		hablar("Me llamo "+ $(this).attr("id"));
+		personajeSeleccionado = $(this).attr("id");
+		
+	});
+	
+	
+	$("body").keydown(function(e){
+		var per = $(".tipo#"+personajeSeleccionado);
+		var offset = per.offset();
+		if(e.which==39)
+			per.offset({ top: offset.top, left: offset.left+5});
+		else if(e.which == 37)
+			per.offset({ top: offset.top, left: offset.left-5});
+
+		console.log(e.which);
+	});
 });
 
 var nombreTipoPrincipal = "Pepinot";
 var nombreTipo2 = "Tonipep";
+var personajeSeleccionado = null;
 
 function crearTipo(nombre) {
 	var todoElTipo = $("<div class='tipo'/>");
